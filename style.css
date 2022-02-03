@@ -1,3 +1,10 @@
-body {
-    font-family: 'lucida console';
+* {
+    font-family: 'Courier New';
+    color:rgb(100, 180, 170);
+    background-color: rgb(59, 50, 66);
+}
+
+h1 {
+    text-decoration: underline;
+    color: rgb(201, 103, 157)
 }
