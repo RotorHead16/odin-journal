@@ -1,13 +1,13 @@
 * {
     font-family: 'Courier New';
-    color:rgb(100, 180, 170);
-    background-color: rgb(59, 50, 66);
+    color:rgb(107, 221, 208);
+    background-color: rgb(69, 54, 94); 
 }
 
 h1 {
     text-decoration: underline;
-    color: rgb(201, 103, 157)
+    color: rgb(247, 122, 191)
 }
  a {
-     color: rgb(255, 228, 139);
+     color: rgb(255, 234, 167);
  }
