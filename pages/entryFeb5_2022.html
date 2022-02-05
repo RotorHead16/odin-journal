@@ -1,18 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <title>February 5, 2022</title>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../style.css">
+<title>February 5, 2022</title>
+
+<style>
+    /* Examples of CSS Principles */
+    p {
+        padding: 3px;
+    }
+
+    /* GROUPING SELECTOR */
+    
+        /** 
+        Comma separated lists allow us to select multiple items and apply styles to them. Unique styles will still apply. 
+        **/
+    .personal, 
+    .business {
+        background-color: rgb(59, 50, 66);
+    }
+
+    .personal {
+        font-size: 10pt;
+    }
+
+    .business {
+        color: rgb(145, 255, 172)
+    }
+
+    /*CHAINING SELECTORS*/
+        /** 
+        Chain selectors by listing them without a space between. You can't chain type selectors (p, div, span, etc) together as far as I know... 
+        **/
+    .personal.header {
+        font-size: 14pt;
+        
+    }
+
+    .business.header {
+        font-size: 16pt;
+    }
+
+    /* Selectors can be chained and grouped, how fancy */
+    .business.header, 
+    .personal.header {
+        text-decoration: underline;
+        background-color: transparent;
+        font-weight: bold;
+    }
+    p.personal {
+        border: 1px dotted rgb(107, 221, 208);
+    }
+
+    p.business {
+        border: 1px dotted rgb(145, 255, 172);
+    }
+    
+    /*DESCENDANT COMBINATOR*/
+        /**
+        Represented by a single space between selectors. Elements with the class "musing" and a parent element "personal" will be styled this way. Therre is no limit to how deeeeep the nesting can go. Doesn't seem to work with type selectors?? 
+        **/
+    .personal .musing {
+        background-color: inherit;
+        display: block;
+        font-size: 8pt;
+        text-align: right; 
+    }
+
+    /* 
+    something like this doesn't seem to work. 
+    p .business {
+        border: 1px dotted rgb(145, 255, 172); 
+    } */
+
+</style>
+
 </head>
 <body>
     <h1>February 5, 2022</h1>
 
-    <p>
+    <div class="personal header" > Personal Stuff </div>
+
+    <p class="personal">
         I've still been playing a lot of Noita, but time to buckle down. There are just a few lessons I want to get through on Odin and then I think I will be better equipped for my work project. 
+
+        <span class="musing" >I wonder what I'll have for lunch... </span>
+
+        This is more text after the musing and it goes pack to the regular p styling. 
     </p>
+
+    <div class="business header"> Business Stuff </div>
+
+    <p class="business"> 
+        This is an example of a business class. 
+
+        <span class="musing">
+            Styles will rever to regular page styles in this span because of the class declaration. 
+
+        </span>
+
+        And then continues afterwards. 
+
+    </p>
+
+
+
+
 
     <a href="../index.html">Back to Index</a>
 
