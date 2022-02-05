@@ -11,3 +11,7 @@ h1 {
  a {
      color: rgb(255, 234, 167);
  }
+
+ .entryNote {
+     font-size: 8pt;
+ }
