@@ -19,6 +19,10 @@ div {
 
 h2, h3, h4 {text-decoration: underline;}
 
+h2 {font-size: 20px;}
+h3 {font-size: 16px;}
+h4 {font-size: 14px;}
+
 p {
     padding: 5px;
     background-color: rgb(59, 50, 66);
@@ -63,4 +67,7 @@ li {
 
  .entryNote {
      font-size: 8pt;
+ }
+ .subItem {
+     margin-left: 20px;
  }
