@@ -9,73 +9,56 @@
 <title>February 5, 2022</title>
 
 <style>
-    /* Examples of CSS Principles */
+
+    div {
+        margin-bottom: 10px;
+        padding: 5px;
+        background-color:rgb(59, 50, 66);
+    }
+    h2, h3, h4 {
+        text-decoration: underline;
+    }
     p {
-        padding: 3px;
+        padding: 5px;
     }
-
-    /* GROUPING SELECTOR */
-    
-        /** 
-        Comma separated lists allow us to select multiple items and apply styles to them. Unique styles will still apply. 
-        **/
-    .personal, 
-    .business {
-        background-color: rgb(59, 50, 66);
-    }
-
-    .personal {
+    li {
         font-size: 10pt;
     }
 
-    .business {
-        color: rgb(145, 255, 172)
+    .personal *, 
+    .business * { /*this is necessary because of the background color set in sheet */
+        background-color: rgb(59, 50, 66);
+        margin: 0;
     }
 
-    /*CHAINING SELECTORS*/
-        /** 
-        Chain selectors by listing them without a space between. You can't chain type selectors (p, div, span, etc) together as far as I know... 
-        **/
-    .personal.header {
-        font-size: 14pt;
-        
-    }
-
-    .business.header {
-        font-size: 16pt;
-    }
-
-    /* Selectors can be chained and grouped, how fancy */
-    .business.header, 
-    .personal.header {
-        text-decoration: underline;
-        background-color: transparent;
-        font-weight: bold;
-    }
-    p.personal {
-        border: 1px dotted rgb(107, 221, 208);
-    }
-
-    p.business {
-        border: 1px dotted rgb(145, 255, 172);
-    }
-    
-    /*DESCENDANT COMBINATOR*/
-        /**
-        Represented by a single space between selectors. Elements with the class "musing" and a parent element "personal" will be styled this way. Therre is no limit to how deeeeep the nesting can go. Doesn't seem to work with type selectors?? 
-        **/
-    .personal .musing {
+    .personal .musing , 
+    .business .musing {
         background-color: inherit;
         display: block;
         font-size: 8pt;
         text-align: right; 
     }
 
-    /* 
-    something like this doesn't seem to work. 
-    p .business {
-        border: 1px dotted rgb(145, 255, 172); 
-    } */
+    /*=== Personal Section ===*/
+    .personal {
+        border: 1px dotted rgb(107, 221, 208);
+    }
+    .personal p {
+        font-size: 10pt;
+    }
+    .personal h2 {
+        font-size: 14pt;
+    }
+    
+    /*=== Business Section ===*/
+    .business {
+        border: 1px dotted rgb(145, 255, 172);
+    }
+    .business * {
+        color: rgb(145, 255, 172);
+    }
+    
+
 
 </style>
 
@@ -83,33 +66,51 @@
 <body>
     <h1>February 5, 2022</h1>
 
-    <div class="personal header" > Personal Stuff </div>
+    <div class="personal">
+        <h2>Personal Stuff</h2>
+        <p>
+            I've still been playing a lot of Noita, but time to buckle down. There are just a few lessons I want to get through on Odin and then I think I will be better equipped for my work project. 
 
-    <p class="personal">
-        I've still been playing a lot of Noita, but time to buckle down. There are just a few lessons I want to get through on Odin and then I think I will be better equipped for my work project. 
+            <span class="musing" >I wonder what I'll have for lunch... </span>
 
-        <span class="musing" >I wonder what I'll have for lunch... </span>
+            This is more text after the musing and it goes pack to the regular p styling. 
+        </p>
 
-        This is more text after the musing and it goes pack to the regular p styling. 
-    </p>
+    </div>
+    
 
-    <div class="business header"> Business Stuff </div>
+    <div class="business"> 
+        <h2>Business Stuff</h2>
+        <p> 
+            This is an example of a business class. 
 
-    <p class="business"> 
-        This is an example of a business class. 
+            <span class="musing">
+                Styles will rever to regular page styles in this span because of the class declaration. 
+            </span>
 
-        <span class="musing">
-            Styles will rever to regular page styles in this span because of the class declaration. 
+            And then continues afterwards. 
+        </p>
+        <h3>The Box Model</h3>
+        <p>
+            There are two kinds of boxes: Block boxes and Inline boxes
 
-        </span>
+            <h4>Block Box</h4>
+            <ul>
+                <li>Will break onto new line</li>
+                <li>the box will fill 100% of its container</li>
+                <li>width and height are respected</li>
+                <li>padding, margin, border push other elements <b><u>away</u></b> from the box</li>
 
-        And then continues afterwards. 
+            </ul>
 
-    </p>
+        </p>
 
+        <h3>Flexbox</h3>
+        <p>
+            
+        </p>
 
-
-
+    </div>
 
     <a href="../index.html">Back to Index</a>
 
