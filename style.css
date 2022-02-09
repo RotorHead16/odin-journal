@@ -2,6 +2,7 @@
     font-family: 'Courier New';
     color:rgb(107, 221, 208);
     background-color: rgb(69, 54, 94); 
+    box-sizing: border-box;
 }
 
 h1 {
@@ -30,7 +31,9 @@ p {
 
 li {
     font-size: 10pt;
+    padding-bottom: 5px;
 }
+
 
 .personal *, 
 .business * { /*this is necessary because of the background color set in sheet */
@@ -70,4 +73,9 @@ li {
  }
  .subItem {
      margin-left: 20px;
+     font-size: 10pt;
+ }
+ 
+ .bold {
+     font-weight: bold;
  }
