@@ -44,9 +44,59 @@
             <h3>The Box Model</h3>
             <ul>
                 <li>Everything in the page is basically in a little box.</li>
-                <li>Box-sizing <a href="https://www.w3schools.com/css/css3_box-sizing.asp" >W3 Link for Box-Sizing</a>
-                    <li class="subItem">Test</li>
+                <li>Box-sizing 
+                    <li class="subItem">
+                        <a href="https://www.w3schools.com/css/css3_box-sizing.asp" >W3 Link for Box-Sizing</a>
+                    </li>
                 </li> 
+                <li>
+                    From inside to outside, the order of the box-model properties is: Padding -> Margin -> Border
+                </li>
+                <li>
+                    The "Box-sizing" property sets how the sizing of a box is calculated. By default it will include margins and padding. To remove that and get a more absolute size of box, set "box-sizing: border-box;"
+                </li>
+                <li style="border: 1px solid rgb(107, 221, 208); margin: 10px 0;">
+                    To create more space between two elements, you should use the "margin" property.
+                </li>
+                <li style="border: 1px solid rgb(107, 221, 208); padding: 10px;">
+                    To create more space between the contents of an element and it's border, you should use the "padding" property. 
+
+                </li>
+                <li style="border: 1px solid rgb(255 127 197); margin-top: -15px;">
+                    If you want two elements to overlap, you should use the "margin" property. 
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            <h3>Display Property: Inline and Block</h3>
+            <ul>
+                <li>Normal Flow</li>
+
+                <li>Block vs. Inline Elements</li>
+                    <li class="subItem">Block <br>
+                        <span>Block elements will appear on the page stacked on top of one another. Each new element after a block element will start on a new line.</span>
+                    </li>
+                    <li class="subItem">Inline <br>
+                        <span>Inline elements will go along with the surrounding flow. In the middle of an paragraph, an inline element will act the same as the rest of the p. Margins and padding should usually not be fiddled with on inline elements. 
+                        </span>
+                    </li>
+                    <li class="subItem">Inline-Block <br>
+                        <span>Behaves like a block elements (allows dimensions, margins, etc) but does not break after end of element. 
+                        </span>
+                    </li>
+                    
+
+                <li>Div and Span Elements</li>
+                    <li class="subItem ">Div <br>
+                        <span>Divs divide the page into blocks</span>
+
+                    </li>
+                    <li class="subItem">Span <br>
+                        <span>Groups text and other inline lements so they can be styled</span>
+
+                    </li>
+                    
 
             </ul>
 
