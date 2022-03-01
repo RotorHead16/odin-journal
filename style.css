@@ -20,6 +20,7 @@ div {
 
 h2, h3, h4 {text-decoration: underline;}
 
+h1 {font-size: 35px;}
 h2 {font-size: 20px;}
 h3 {font-size: 16px;}
 h4 {font-size: 14px;}
@@ -78,4 +79,14 @@ li {
  
  .bold {
      font-weight: bold;
+ }
+
+.selecList li {
+    margin: 5px 0px;
+ }
+
+ .code {
+    display: inline-block;
+    margin-top: 10px;
+    color: rgb(255, 234, 167);
  }
